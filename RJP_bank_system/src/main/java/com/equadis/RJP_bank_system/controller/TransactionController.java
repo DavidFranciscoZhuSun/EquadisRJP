@@ -15,7 +15,7 @@ public class TransactionController {
     @Autowired
     public TransactionService transactionService;
 
-    @GetMapping(value = "/Trans/{id}")
+    @GetMapping(value = "/trans/{id}")
     public ResponseBean<Transaction> getTransaction(@PathVariable long id) {
         try {
             return ResponseBean.success(transactionService.findTransactionById(id));
@@ -24,7 +24,7 @@ public class TransactionController {
         }
     }
 
-    @PostMapping(value = "/Trans/create")
+    @PostMapping(value = "/trans/create")
     public ResponseBean<TransactionDTO> createTransaction(@RequestBody CreateTransactionDTO newTransaction) {
         try {
             return ResponseBean.success(transactionService.addNewTransaction(newTransaction));
@@ -33,7 +33,7 @@ public class TransactionController {
         }
     }
 
-    @GetMapping(value = "/Trans/all")
+    @GetMapping(value = "/trans/all")
     public ResponseBean<List<TransactionDTO>> getAllTransactionsByCustomerId(@RequestParam long customerId) {
         try {
             return ResponseBean.success(transactionService.getAllTransactionsByCustomerId(customerId));
