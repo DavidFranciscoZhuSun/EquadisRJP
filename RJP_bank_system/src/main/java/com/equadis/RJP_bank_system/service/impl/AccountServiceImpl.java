@@ -44,4 +44,14 @@ public class AccountServiceImpl implements AccountService {
 
         return AccountConverter.convertAccount(account);
     }
+
+    @Override
+    public Boolean checkAccount(long id, String password) {
+        Account account = accountMapper.findById(id).orElseThrow(() -> new IllegalStateException("Account does not exist"));
+        if (!account.getPassword().equals(password)) {
+            throw new IllegalStateException("Wrong password!");
+        } else {
+            return true;
+        }
+    }
 }

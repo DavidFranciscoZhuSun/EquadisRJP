@@ -11,5 +11,5 @@ public interface TransactionService {
 
     public TransactionDTO addNewTransaction(CreateTransactionDTO newTransaction);
 
-    public List<TransactionDTO> getAllTransactionsByCustomerId(long customerId);
+    public List<TransactionDTO> getAllTransactionsByCustomerId(long accountId);
 }

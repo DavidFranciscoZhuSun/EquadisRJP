@@ -33,4 +33,16 @@ public class AccountController {
             return ResponseBean.error(e.getMessage());
         }
     }
+
+    @GetMapping(value = "/account/check")
+    public ResponseBean<Boolean> checkAccount(
+            @RequestParam long id,
+            @RequestParam String password
+    ) {
+        try {
+            return ResponseBean.success(accountService.checkAccount(id, password));
+        } catch (Exception e) {
+            return ResponseBean.error(e.getMessage());
+        }
+    }
 }

@@ -9,4 +9,6 @@ public interface AccountService {
 
     public AccountDTO addNewAccount(CreateAccountDTO createAccountDTO);
 
+    public Boolean checkAccount(long id, String password);
+
 }
