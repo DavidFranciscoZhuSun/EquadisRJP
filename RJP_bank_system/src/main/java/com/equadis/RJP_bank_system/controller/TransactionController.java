@@ -34,9 +34,9 @@ public class TransactionController {
     }
 
     @GetMapping(value = "/trans/all")
-    public ResponseBean<List<TransactionDTO>> getAllTransactionsByCustomerId(@RequestParam long customerId) {
+    public ResponseBean<List<TransactionDTO>> getAllTransactionsByCustomerId(@RequestParam long accountId) {
         try {
-            return ResponseBean.success(transactionService.getAllTransactionsByCustomerId(customerId));
+            return ResponseBean.success(transactionService.getAllTransactionsByCustomerId(accountId));
         } catch (Exception e) {
             return ResponseBean.error(e.getMessage());
         }

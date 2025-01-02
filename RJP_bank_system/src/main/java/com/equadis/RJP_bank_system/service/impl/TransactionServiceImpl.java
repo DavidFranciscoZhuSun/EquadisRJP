@@ -53,8 +53,8 @@ public class TransactionServiceImpl implements TransactionService {
     }
 
     @Override
-    public List<TransactionDTO> getAllTransactionsByCustomerId(long customerId) {
-        List<Transaction> transactionList = transactionMapper.findByAccountId(customerId);
+    public List<TransactionDTO> getAllTransactionsByCustomerId(long accountId) {
+        List<Transaction> transactionList = transactionMapper.findByAccountId(accountId);
 
         List<TransactionDTO> transactionDTOList = new ArrayList<TransactionDTO>();
         for (Transaction transaction : transactionList) {
