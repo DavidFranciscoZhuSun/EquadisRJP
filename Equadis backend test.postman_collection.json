@@ -1,8 +1,9 @@
 {
 	"info": {
-		"_postman_id": "03c4a52c-dc92-4b99-8ca2-494fa1103eb0",
+		"_postman_id": "689a9bc2-89eb-4346-a3fa-1df702c867e4",
 		"name": "Equadis backend test",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23393852"
 	},
 	"item": [
 		{
@@ -47,23 +48,6 @@
 					"path": [
 						"customer",
 						"david@123.com"
-					],
-					"query": [
-						{
-							"key": "id",
-							"value": null,
-							"disabled": true
-						},
-						{
-							"key": "name",
-							"value": null,
-							"disabled": true
-						},
-						{
-							"key": "email",
-							"value": null,
-							"disabled": true
-						}
 					]
 				}
 			},
@@ -136,7 +120,7 @@
 			"response": []
 		},
 		{
-			"name": "localhost:8080/Trans/create",
+			"name": "localhost:8080/trans/create",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -150,13 +134,13 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/Trans/create",
+					"raw": "localhost:8080/trans/create",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"Trans",
+						"trans",
 						"create"
 					]
 				}
@@ -164,24 +148,53 @@
 			"response": []
 		},
 		{
-			"name": "localhost:8080/Trans/all?customerId=4",
+			"name": "localhost:8080/trans/all",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/Trans/all?customerId=4",
+					"raw": "localhost:8080/trans/all?accountId=4",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"Trans",
+						"trans",
 						"all"
 					],
 					"query": [
 						{
-							"key": "customerId",
+							"key": "accountId",
 							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/account/check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/account/check?id=1&password=123456",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						"check"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "password",
+							"value": "123456"
 						}
 					]
 				}
