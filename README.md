@@ -55,6 +55,11 @@ I have update an `Equadis backend test.postman_collection.json` file, you can im
 ### Account Endpoints
 - **GET** `/account/{id}` — Search the Account by id.
 
+- **GET** `/account/check` — Check the account`s password.
+  - **Request Params**:
+    `key: id, value: 1, type: long`
+    `key: password, value: 123456, type: string`
+    
 - **POST** `/account/create` — Create a new account with an initial balance.
   - **Request Body**:
     ```json
@@ -66,9 +71,20 @@ I have update an `Equadis backend test.postman_collection.json` file, you can im
     ```
 
 ### Transaction Endpoints
-- **GET** `/transactions/all` — Get all transactions for an account by customerId.
-- **Request Params**:
-    `key: accountId, value: 4, type: int`
+- **GET** `/trans/{id}` — Get transaction by id.
 
+- **GET** `/trans/all` — Get all transactions for an account by customerId.
+  - **Request Params**:
+    `key: accountId, value: 4, type: long`
+
+- **POST** `/trans/create` — Create a new transaction.
+  - **Request Body**:
+    ```json
+    {
+      "accountId": 4,
+      "amount": 100,
+      "action": "deposit"
+    } 
+    ```
 
 Let me know if you'd like to add or adjust anything!
