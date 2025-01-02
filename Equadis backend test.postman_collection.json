@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "03c4a52c-dc92-4b99-8ca2-494fa1103eb0",
+		"name": "Equadis backend test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/account/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"Andy@123.com\",\r\n    \"password\": \"999999\",\r\n    \"balance\": 10000.50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/account/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/customer/david@123.com",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/customer/david@123.com",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"david@123.com"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/customer/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Andy\",\r\n    \"email\": \"Andy@123.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/customer/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/trans/2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/trans/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"trans",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/account/4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/account/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/Trans/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\": 4,\r\n    \"amount\": 100,\r\n    \"action\": \"deposit\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/Trans/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Trans",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/Trans/all?customerId=4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/Trans/all?customerId=4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Trans",
+						"all"
+					],
+					"query": [
+						{
+							"key": "customerId",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
